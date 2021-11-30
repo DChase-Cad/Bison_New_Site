@@ -14,7 +14,7 @@ export default function header(){
                     <div className="container container-fluid">
                         <div className="row justify-content-center">
                             <div className="mx-auto header">
-                                <Link to='/home' className="text-decoration-none"><h1 className="font-weight-bold text-center">Lathe-Chucks.net</h1></Link>
+                                <Link to='/home' className="text-decoration-none"><h1 className="font-weight-bold text-center">BisonChucksOnline.com</h1></Link>
                                 <h2 className="d-none d-md-block text-center">One stops resource for all your lathe chuck needs!</h2>
                             </div>
                         </div>

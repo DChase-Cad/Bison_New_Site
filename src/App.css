@@ -411,7 +411,7 @@
   border-radius: 2rem;
 }
 
-.pro-inner-item:last-child:focus {
+.pro-inner-item:last-child:focus-within {
   outline: none;
   color: #4c4c4d;
   background-color: white;
