@@ -1,15 +1,14 @@
 import React from 'react';
 import { ProSidebar, SidebarHeader, SidebarFooter, SidebarContent, MenuItem, Menu, SubMenu } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
-import { FaCog } from 'react-icons/fa';
-import chuck from '../chuck_icon.png';
+
 
 
 const Sidebar = () => {
     return (
 
-        <div>
-            <ProSidebar  breakPoint={'sm'} >
+        <div className='height-auto'>
+            <ProSidebar className="h-100" breakPoint={'sm'} >
                 <SidebarHeader>
                     Bison Lathe Chucks
                 </SidebarHeader>

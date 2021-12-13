@@ -55,7 +55,8 @@
 .pro-sidebar {
   color: black;
   height: 100%;
-  max-height:80vh;
+  max-height: 100vh;
+  min-height: 100%;
   width: 270px;
   min-width: 270px;
   text-align: left;
@@ -416,12 +417,9 @@
   color: #4c4c4d;
   background-color: white;
   font-weight: bold;
-  border-top-right-radius:0px !important;
-  border-bottom-right-radius:0px !important;
-
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
-
-
 
 .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
   margin-right: 10px;
@@ -907,40 +905,45 @@
   margin: auto;
 }
 
-.body{
+.body {
   min-width: 100vw;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-link{
-  color:rgb(201, 200, 200) !important;
+.nav-link {
+  color: rgb(201, 200, 200) !important;
 }
 /*# sourceMappingURL=app.css.map */
-li a{
-  color:black;
+li a {
+  color: black;
   text-decoration: none;
-  margin:auto;
+  margin: auto;
 }
-.foot-link{
+.foot-link {
   background-color: white;
-  border-radius:2rem;
-  margin:auto;
+  border-radius: 2rem;
+  margin: auto;
   overflow: hidden;
-  width:50%;
-  margin-bottom: .10rem;
+  width: 50%;
+  margin-bottom: 0.1rem;
 }
 .foot-link:hover {
   background-color: #4c4c4d;
-  color:white !important;
-  font-weight:bold;
+  color: white !important;
+  font-weight: bold;
 }
 
-.foot-link:hover a{
-  color:white;
-  font-weight:bold;
+.foot-link:hover a {
+  color: white;
+  font-weight: bold;
 }
-.fot-a:hover{
-  color:white;
+.fot-a:hover {
+  color: white;
+}
+
+.card-img {
+  width: 15em;
+  height:15em;
 }
 

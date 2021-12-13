@@ -8,12 +8,12 @@ import 'typeface-open-sans';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+
 
 ReactDOM.render(
-  <BrowserRouter>
+  
     <App />
-  </BrowserRouter>,
+  ,
   document.getElementById('root')
 );
 

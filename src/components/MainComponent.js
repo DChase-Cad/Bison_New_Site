@@ -1,5 +1,5 @@
-import React from 'react';
-import {Helmet} from 'react-helmet';
+import React, {useEffect} from 'react';
+
 import HomeComponent from './HomeComponent';
 import Header from './Header'
 import Footer from './Footer'
@@ -24,14 +24,16 @@ import FourIndSemi from './Bison/FourJaw/Independent/FourIndSemi'
 import FourComboForged from './Bison/FourJaw/Combination/FourComboForged';
 import FourComboSemi from './Bison/FourJaw/Combination/FourComboSemi';
 
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Sidebar from './sidebar';
 
 
-let page_title=''
+let title = 'Bison Lathe Chucks'
 
 export default function MainComponent() {
-
+    useEffect(() => {
+        document.title = title
+    }, []);
     return (
         <>
             <div className="container-fluid">
@@ -39,44 +41,44 @@ export default function MainComponent() {
                 <div className="container home-width">
                     <div className="mx-auto main-bg d-flex">
                         <Sidebar className="justify-self-start min-100" />
-                        <Switch className="justify-self-end">
-                            <Route path='/home' component={HomeComponent} />
+                        <Routes> 
+                            <Route path='/home' element={<HomeComponent />} />
 
                             {/* 2 jaw routing */}
-                            <Route path='/twoforged' component={TwoForged} />
-                            <Route path='/twosemi' component={TwoSemi} />
+                            <Route path='/twoforged' element={<TwoForged />} />
+                            <Route path='/twosemi' element={<TwoSemi />} />
 
                             {/* 3 jaw routing */}
-                            <Route path='/threeforged' component={ThreeForged} />
-                            <Route path='/threehd' component={ThreeHD} />
-                            <Route path='/threelive' component={ThreeLive} />
-                            <Route path='/threesemi' component={ThreeSemi} />
-                            <Route path='/threesettru' component={ThreeSetTru} />
+                            <Route path='/threeforged' element={<ThreeForged />} />
+                            <Route path='/threehd' element={<ThreeHD />} />
+                            <Route path='/threelive' element={<ThreeLive />} />
+                            <Route path='/threesemi' element={<ThreeSemi />} />
+                            <Route path='/threesettru' element={<ThreeSetTru />} />
 
                             {/* 4j scroll routing */}
-                            <Route path='/fourscrollforged' component={FourScrollForged} />
-                            <Route path='/fourscrollsemi' component={FourScrollSemi} />
-                            <Route path='/fourscrollsettru' component={FourScrollSetTru} />
+                            <Route path='/fourscrollforged' element={<FourScrollForged />} />
+                            <Route path='/fourscrollsemi' element={<FourScrollSemi />} />
+                            <Route path='/fourscrollsettru' element={<FourScrollSetTru />} />
 
                             {/* 4j independent routing */}
-                            <Route path='/fourindforged' component={FourIndForged} />
-                            <Route path='/fourindsemi' component={FourIndSemi} />
-                            <Route path='/fourindhd' component={FourIndHD} />
-                            
+                            <Route path='/fourindforged' element={<FourIndForged />} />
+                            <Route path='/fourindsemi' element={<FourIndSemi />} />
+                            <Route path='/fourindhd' element={<FourIndHD />} />
+
 
                             {/* 4j combo routing */}
-                            <Route path='/fourcombosemi' component={FourComboSemi} />
-                            <Route path='/fourcomboforged' component={FourComboForged} />
-                            
+                            <Route path='/fourcombosemi' element={<FourComboSemi />} />
+                            <Route path='/fourcomboforged' element={<FourComboForged />} />
+
 
                             {/* 6j routing */}
-                            <Route path='/sixsettru' component={SixSetTru} />
-                            <Route path='/sixforged' component={SixForged} />
-                            <Route path='/sixsemi' component={SixSemi} />
-                            
+                            <Route path='/sixsettru' element={<SixSetTru />} />
+                            <Route path='/sixforged' element={<SixForged />} />
+                            <Route path='/sixsemi' element={<SixSemi />} />
 
-                            <Redirect to='/home' />
-                        </Switch>
+
+                            {/* <Redirect to='/home' /> */}
+                        </Routes>
                     </div>
                 </div>
                 <Footer />
